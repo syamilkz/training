@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- start dropbox -->
+  <div class="navbar">
+    <img src="gambar/logo.png" width="150">
+    <a href="#contact">Contact</a>
+    <div class="dropdown">
+      <button class="dropbtn">Our Service</button>
+      <div class="dropdown-content">
+        <a href="#">Hotel Reservation</a>
+        <a href="#">Staff Transpotation</a>
+        <a href="#">Air Ticketing</a>
+        <a href="#">Pasport and Visa</a>
+        <a href="#">Car Rental</a>
+        <a href="#">Car on Call</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Top Destination</button>
+      <div class="dropdown-content">
+        <a href="#">Singapore</a>
+        <a href="#">Thailand</a>
+        <a href="#">Vietnam</a>
+        <a href="#">Melbourne</a>
+      </div>
+    </div>
+    <a href="#news">About Us</a>
+    <div class="dropdown">
+      <button class="dropbtn">Tour Package</button>
+      <div class="dropdown-content">
+        <a href="#">International Tour </a>
+        <a href="#">Adventure Tour</a>
+        <a href="#">Domestic Tour</a>
+      </div>
+    </div>
+    <a href="#home">Home</a>
+  </div>
+    <!-- end dropbox -->
+
+  <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- slide image -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="slider/slider_1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="slider/slider_2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="slider/slider_3.jpg" style="width:100%">
+  </div>
+
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- Bulat -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<!-- Java Script start -->
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+  <!-- Java Script end -->
+
+  <!-- selected box -->
+  
+  <div class="container"> 
+  <form class="custom-select" style="width:2000px;">
+    <select>
+      <option value="0">where you want to go:</option>
+      <option value="1">Singapore</option>
+      <option value="2">Thailand</option>
+      <option value="3">Vietnam</option>
+      <option value="4">Melbourne</option>
+    </select>
+    <form>
+      <label for="date">Date:</label>
+      <input type="date">
+    </form>
+    <form class="custom-select" style="width:500px;">
+      <select>
+        <option value="0">Number of people:</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <input type="submit" value="Submit">
+    </div>
+
+  <!--selected box end-->
+
+  <!--tour packages-->
+  <h1>Tour Packages</h1>
+  <div class="container">
+    <img src="gambar/tour_img_1.jpg">
+    <div class="text-block">
+      <h2>Domestic Tour</h2>
+      <p>The author of life
+        ernibstibulum </p>
+        <p>poisonous bed
+            eestibulum in</p>
+            <p>front of the throat
+                lay down their beds</p><br>
+                <p><b>
+                  Go for international tour >
+                </p><b>
+                <div class="text-block"></div>
+    </div>
+  </div>
+
+</body>
+</html>
